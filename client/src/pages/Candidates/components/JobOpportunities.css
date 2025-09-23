@@ -3,12 +3,14 @@
     align-items: center;
     justify-content: center;
     background: #fff;
-    padding-left: 130px;
-    padding-right: 110px;
-    padding-top: 60px;
-    padding-bottom: 120px;
     font-family: Arial, sans-serif;
     gap: 40px;
+    padding-left: clamp(40px, 6vw, 130px);
+    padding-right: clamp(40px, 6vw, 110px);
+    padding-top: clamp(40px, 6vw, 60px);
+    padding-bottom: clamp(40px, 6vw, 120px);
+    max-width: 1900px;
+    margin: 0 auto;
     /* small space between columns */
 }
 
