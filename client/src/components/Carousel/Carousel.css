@@ -204,7 +204,7 @@
 }
 
 .btn-primary,.btn-secondary {
-    background-color: #21e76090;
+    background: linear-gradient(135deg, #2c5aa0 0%, #1a9186 50%, #4ade80 100%);
     color: white;
     font-size: 20px;
 }
@@ -228,3 +228,130 @@
     }
 }
 
+/* ✅ Keep your original design — only adding responsive fixes */
+
+/* Adjust container height on small screens */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Make title scale nicely */
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
+
+/* Keep description readable */
+@media (max-width: 768px) {
+    .carousel-description {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+}
+
+/* Button responsiveness */
+@media (max-width: 768px) {
+    .carousel-buttons {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        font-size: 0.85rem;
+        padding: 8px 18px;
+    }
+}
+
+/* Adjust container height on tablets/mobiles */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 80vh;
+    }
+
+    .content-wrapper {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .carousel-text {
+        text-align: center;
+    }
+}
+
+/* On very small screens (mobile portrait) */
+@media (max-width: 480px) {
+    .carousel-container {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content-wrapper {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .carousel-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .carousel-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: justify;
+        padding: 0 8px;
+        margin-bottom: 25px;
+    }
+
+    .carousel-buttons {
+        flex-direction: column;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 12px 22px;
+        width: 80%;
+        /* ✅ full width buttons on mobile */
+    }
+}

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Carousel.css';
 
 // Import images from assets folder
-import image1 from '../assets/images/caro1.png';
-import image2 from '../assets/images/caro2.png';
+import image1 from '../../assets/images/caro1.png';
+import image2 from '../../assets/images/caro2.png';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

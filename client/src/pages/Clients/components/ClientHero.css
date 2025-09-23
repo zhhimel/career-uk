@@ -1,0 +1,124 @@
+/* Hero container */
+.client-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* base height */
+    overflow: hidden;
+}
+
+/* Background image */
+.client-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay container */
+.client-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6rem;
+    padding-top: 250px;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* Title text */
+.client-hero-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin: 0;
+    color:rgb(63, 61, 61)
+}
+
+/* Breadcrumb */
+.client-hero-breadcrumb {
+    font-size: 1.25rem;
+}
+
+/* Make HOME green */
+.client-home-link {
+    color: #22c55e;
+    font-weight: 500;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1200px) {
+    .client-hero {
+        height: 350px;
+    }
+
+    .client-hero-overlay {
+        padding: 0 4rem;
+        padding-top: 200px;
+    }
+
+    .client-hero-title {
+        font-size: 2rem;
+    }
+
+    .client-hero-breadcrumb {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .client-hero {
+        height: 300px;
+    }
+
+    .client-hero-overlay {
+        padding: 0 3rem;
+        padding-top: 160px;
+    }
+
+    .client-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .client-hero-breadcrumb {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .client-hero {
+        height: 260px;
+    }
+
+    .client-hero-overlay {
+        padding: 0 2rem;
+        padding-top: 140px;
+    }
+
+    .client-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .client-hero-breadcrumb {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-hero {
+        height: 220px;
+    }
+
+    .client-hero-overlay {
+        padding: 0 1.2rem;
+        padding-top: 120px;
+    }
+
+    .client-hero-title {
+        font-size: 1.3rem;
+    }
+
+    .client-hero-breadcrumb {
+        font-size: 0.85rem;
+    }
+}

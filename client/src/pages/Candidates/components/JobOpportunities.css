@@ -1,0 +1,118 @@
+.people-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding-left: 130px;
+    padding-right: 110px;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    font-family: Arial, sans-serif;
+    gap: 40px;
+    /* small space between columns */
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    border-radius: 15px;
+    overflow: visible;
+}
+
+.people-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Circle image overlay */
+.circle-img {
+    position: absolute;
+    bottom: -70px;
+    left: 40px;
+    width: 280px;
+    height: auto;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+.text-container p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #6f6f6f;
+}
+
+/* ===================== */
+/*   RESPONSIVE STYLES   */
+/* ===================== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .people-page {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .text-container p {
+        font-size: 20px;
+    }
+
+    .circle-img {
+        width: 220px;
+        bottom: -60px;
+        left: 20px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .people-page {
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%;
+        flex: unset;
+    }
+
+    .text-container {
+        padding: 20px 10px;
+        text-align: center;
+        /* optional: center text on mobile */
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .circle-img {
+        width: 180px;
+        bottom: -40px;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Extra small phones (≤480px) */
+@media (max-width: 480px) {
+    .text-container p {
+        font-size: 16px;
+    }
+
+    .circle-img {
+        width: 140px;
+        bottom: -30px;
+    }
+}

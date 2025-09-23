@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
-import logo from "../assets/images/logo.png"; // ✅ import logo image
+import logo from "../../assets/images/logo.png"; // ✅ import logo image
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,10 +29,10 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="desktop-menu">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
               <a href="#">About Us</a>
-              <a href="#">Candidates</a>
-              <a href="#">Clients</a>
+              <a href="/candidates">Candidates</a>
+              <a href="/clients">Clients</a>
               <a href="#">Contact Us</a>
               <a href="#">Vacancies</a>
               <a href="#">Job Application Form</a>
@@ -51,10 +51,10 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="mobile-menu">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="#">About Us</a>
-            <a href="#">Candidates</a>
-            <a href="#">Clients</a>
+            <a href="candidates">Candidates</a>
+            <a href="/clients">Clients</a>
             <a href="#">Contact Us</a>
             <a href="#">Vacancies</a>
             <a href="#">Job Application Form</a>
