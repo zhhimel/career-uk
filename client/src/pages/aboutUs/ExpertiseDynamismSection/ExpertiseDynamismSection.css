@@ -1,0 +1,174 @@
+.expertise-dynamism-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  align-items: center;
+  gap: 40px;
+  flex-direction: row-reverse; /* Puts visuals on the left, content on the right */
+}
+
+.expertise-dynamism-visuals {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing */
+}
+
+.handshake-image-container {
+  position: relative;
+  width: 450px; /* Adjust size */
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  background-color: #f0f0f0; /* Fallback */
+}
+
+.handshake-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.purple-blob {
+  position: absolute;
+  top: -20px;
+  left: 0px; /* Position to the left of the image container */
+  width: 180px;
+  height: 180px;
+  background-color: #8a2be2; /* Purple color */
+  border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
+  filter: blur(40px);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.expertise-dynamism-content {
+  flex: 1.5; /* Give content more space */
+  min-width: 350px;
+}
+
+.expertise-dynamism-content .section-subtitle {
+  color: #5cb85c; /* Green accent color */
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.expertise-dynamism-content .main-statement {
+  font-size: 1.6em; /* Larger font for the main statement */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.details-list {
+  list-style: none; /* Remove default bullet */
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  position: relative;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 25px; /* Space for custom bullet */
+  line-height: 1.7;
+}
+
+.details-list li::before {
+  content: '•'; /* Custom bullet point */
+  color: #5cb85c; /* Green bullet */
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1024px) {
+  .expertise-dynamism-section {
+    flex-direction: column; /* Stack content and visuals */
+    margin: 60px auto;
+    padding: 0 30px;
+  }
+
+  .expertise-dynamism-content,
+  .expertise-dynamism-visuals {
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .expertise-dynamism-visuals {
+    order: -1; /* Place visuals above content on mobile */
+    min-height: 350px;
+  }
+
+  .handshake-image-container {
+    width: 90%;
+    max-width: 450px;
+    height: 250px;
+  }
+
+  .purple-blob {
+    top: -10px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .expertise-dynamism-section {
+    margin: 40px auto;
+    padding: 0 15px;
+    gap: 30px;
+  }
+
+  .expertise-dynamism-content .main-statement {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  .details-list li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .expertise-dynamism-visuals {
+    min-height: 300px;
+  }
+
+  .handshake-image-container {
+    width: 95%;
+    height: 200px;
+  }
+
+  .purple-blob {
+    width: 120px;
+    height: 120px;
+    filter: blur(30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-dynamism-content .main-statement {
+    font-size: 1.2em;
+  }
+}

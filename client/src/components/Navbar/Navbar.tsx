@@ -30,7 +30,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="desktop-menu">
               <a href="/">Home</a>
-              <a href="#">About Us</a>
+              <a href="/about">About Us</a>
               <a href="/candidates">Candidates</a>
               <a href="/clients">Clients</a>
               <a href="#">Contact Us</a>

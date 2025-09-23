@@ -1,0 +1,223 @@
+.mission-vision-section {
+  position: relative; /* Needed for positioning the wave background */
+  background-color: #3b8e9b; /* Main background color for this section */
+  padding-bottom: 80px; /* Space at the bottom */
+  color: white; /* Default text color for this section */
+  overflow: hidden; /* Ensure wave doesn't overflow */
+}
+
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Height of the wave area */
+  background-image: url('../../../assets/images/top-wave.png'); /* Replace with your wave SVG or PNG */
+  background-repeat: no-repeat;
+  background-size: cover; /* Cover the top area */
+  background-position: top center;
+  z-index: 0; /* Behind content */
+}
+
+.mission-vision-content-wrapper {
+  max-width: 1200px;
+  margin: 100px auto 0; /* Push down from the wave and center */
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative; /* To bring content above wave */
+  z-index: 1;
+}
+
+.mission-vision-text-column {
+  flex: 1.2; /* Give more space to text */
+  min-width: 300px;
+}
+
+.mission-vision-text-column .section-subtitle {
+  color: #a2e8a2; /* Lighter green accent for contrast on dark background */
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mission-vision-text-column h2 {
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+.mission-vision-text-column p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+}
+
+.mission-vision-cards-column {
+  flex: 1; /* Less space for cards */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center; /* Center cards vertically */
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.mission-card {
+  /* Specific styling for mission card if needed */
+}
+
+.vision-card {
+  /* Specific styling for vision card if needed */
+  background-color: #5cb85c; /* Green background for vision card */
+  color: white;
+}
+
+.card-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0; /* Light background for icon circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vision-card .card-icon {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white for vision icon background */
+}
+
+.card-icon img {
+  width: 35px;
+  height: 35px;
+  filter: invert(30%) sepia(80%) saturate(1000%) hue-rotate(100deg) brightness(80%) contrast(100%); /* Green filter for icon */
+}
+
+.vision-card .card-icon img {
+  filter: invert(100%) brightness(200%); /* White filter for vision icon */
+}
+
+
+.card-text h3 {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333; /* Dark text for mission card */
+}
+
+.vision-card .card-text h3 {
+  color: white; /* White text for vision card */
+}
+
+.card-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666; /* Grey text for mission card */
+}
+
+.vision-card .card-text p {
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for vision card */
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+  .mission-vision-content-wrapper {
+    flex-direction: column; /* Stack columns */
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+
+  .mission-vision-text-column,
+  .mission-vision-cards-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .mission-vision-cards-column {
+    order: -1; /* Move cards above text on smaller screens */
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-section {
+    padding-bottom: 60px;
+  }
+
+  .wave-background {
+    height: 80px;
+  }
+
+  .mission-vision-content-wrapper {
+    margin-top: 40px;
+    padding: 0 15px;
+    gap: 30px;
+  }
+
+  .mission-vision-text-column h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
+
+  .mission-vision-text-column p {
+    font-size: 1em;
+  }
+
+  .card {
+    flex-direction: column; /* Stack icon and text within card */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card-icon {
+    margin: 0 auto 15px; /* Center icon and add space below */
+  }
+
+  .card-text h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+  }
+
+  .card-text p {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-background {
+    height: 60px;
+  }
+
+  .mission-vision-text-column h2 {
+    font-size: 1.8em;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
