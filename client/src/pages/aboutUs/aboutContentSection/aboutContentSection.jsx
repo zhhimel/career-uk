@@ -1,144 +1,142 @@
-import React, { useEffect, useRef } from 'react';
-
+import React from 'react';
+import { motion } from 'framer-motion';
+import roundImage from '../../../assets/images/round.png';
+import candidateworking from '../../../assets/images/candidate-working.png';
+import recruiterworking from '../../../assets/images/recruiter-working.png';
+import { useEffect, useRef, useState } from 'react';
 const AboutSection = () => {
-  const rightImageRef = useRef(null);
-  const textColumnRef = useRef(null);
-
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    // Animate the right image from bottom to top on load
-    if (rightImageRef.current) {
-      setTimeout(() => {
-        rightImageRef.current.style.transform = 'translateY(0)';
-        rightImageRef.current.style.opacity = '1';
-      }, 300);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing after animation triggers once
+        }
+      },
+      { threshold: 0.3 } // 30% of section visible to trigger
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-    
-    // Animate the text column from right to left on load (since it's on the right side in desktop view)
-    if (textColumnRef.current) {
-      setTimeout(() => {
-        textColumnRef.current.style.transform = 'translateX(0)';
-        textColumnRef.current.style.opacity = '1';
-      }, 100);
-    }
+
+    return () => observer.disconnect();
   }, []);
-
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-white">
-      <div className="container mx-auto">
-        {/* Main two-column layout */}
-        <div className="flex flex-col-reverse md:flex-row gap-12 items-center md:items-start">
-          {/* Left Column - Images */}
-          <div className="md:order-1 w-full md:w-1/2 flex justify-center md:justify-start">
-            {/* Dotted grid pattern background */}
-            <div className="absolute inset-0 z-0">
-              <style jsx>{`
-                .dotted-grid {
-                  background-image: 
-                    radial-gradient(circle, #10b981 2px, transparent 2px);
-                  background-size: 20px 20px;
-                  background-position: 0 0;
-                }
-              `}</style>
-              <div className="w-full h-full bg-white dotted-grid opacity-30"></div>
-            </div>
+    <div className="min-h-screen bg-white py-12 px-4 md:px-8">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
 
-            {/* Two pill-shaped images */}
-            <div className="flex flex-col md:flex-row gap-6 relative z-10">
-              {/* Woman image - smaller and more oval */}
-              <div className="w-56 h-80 rounded-[7rem] overflow-hidden shadow-lg relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                  alt="Professional woman working" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+    {/* Left Side - Images */}
+    <div className="relative w-full lg:w-2/4 flex justify-center mx-auto">
+      {/* Background Dot Pattern */}
+      <div
+        className="absolute bottom-0 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[450px] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 5px 5px, #0ea5e9 2px, transparent -1px)`,
+          backgroundSize: '20px 20px'
+        }}
+      />
 
-              {/* Man image with overlapping circles and animation */}
-              <div 
-                ref={rightImageRef}
-                className="w-64 h-96 rounded-[7rem] overflow-hidden shadow-lg relative transition-all duration-1000 ease-out transform translate-y-10 opacity-0"
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                  alt="Professional man working" 
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Large green/blue circle aligned with right image's bottom - same diameter as image width */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 opacity-30"></div>
-                
-                {/* Additional smaller circle for layered effect */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-56 h-56 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 opacity-20"></div>
-              </div>
-            </div>
-          </div>
+      {/* Image Containers */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-10 w-full justify-center z-10">
+        {/* Left Image */}
+        <div className="mt-[50px] md:mt-[75px] w-full md:w-[50%] h-[20rem] sm:h-[25rem] md:h-[30rem] rounded-[220px] overflow-hidden shadow-2xl relative">
+          <img
+            src={candidateworking}
+            alt="Professional woman at desk"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
 
-          {/* Right Column - Text Content */}
-          <div 
-            ref={textColumnRef}
-            className="md:order-2 w-full md:w-1/2 space-y-6 transition-all duration-1000 ease-out transform translate-x-10 opacity-0"
-          >
-            {/* Label with divider */}
-            <div className="flex items-center justify-end md:justify-start">
-              <span className="text-sm font-semibold uppercase tracking-wider text-gray-600 bg-white px-2 relative z-10">
-                ABOUT US
-              </span>
-              <div className="flex-grow h-0.5 bg-emerald-500 ml-4"></div>
-            </div>
+        {/* Right Image */}
+        <div className="relative w-full md:w-[50%] h-[30rem] sm:h-[35rem] md:h-[40rem] rounded-[220px] overflow-hidden shadow-2xl">
+          {/* Motion Right Image */}
+          <motion.img
+            src={recruiterworking}
+            alt="Professional man with laptop"
+            className="w-full h-full object-cover object-center"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          />
 
-            {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              About <span className="text-blue-500">Careerup Ltd</span>
-            </h2>
-
-            {/* Paragraphs */}
-            <div className="space-y-6 text-gray-700">
-              <p>
-                Our approach combines thoughtful analysis and heartfelt dedication. We attentively listen to your preferences, understand your requirements, and skillfully align you with a job that suits you perfectly. We consider everything from your career aspirations and personality to even your commuting needs – our comprehensive approach leaves no stone unturned.
-              </p>
-              <p>
-                Careerup Ltd is proud to hold the Gangmasters and Labour Abuse Authority (GLAA) license, which reflects our commitment to ensuring fair and ethical practices within the recruitment industry. The GLAA is responsible for regulating and monitoring labour exploitation within industries such as food processing. By holding this license, Careerup Ltd guarantees that all workers are provided with safe, ethical working conditions, fair pay, and appropriate support. This license also ensures that we comply with strict standards to prevent the exploitation of vulnerable workers, offering them the security and protection they deserve.
-              </p>
-            </div>
-
-            {/* Feature Rows */}
-            <div className="space-y-8 pt-6">
-              {/* Feature 1 */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
-                  <img 
-                    src="https://careerup.uk/wp-content/uploads/2024/12/icon-1.png  " 
-                    alt="Support icon" 
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <div className="flex-grow">
-                  <p className="text-gray-700">
-                    We provide unwavering support throughout your career journey, ensuring that we are always within reach whenever you require assistance. Whether it's guidance, advice, or any other form of support, we are just a phone call away.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
-                  <img 
-                    src="https://careerup.uk/wp-content/uploads/2024/12/icon-5-1.png  " 
-                    alt="Experience icon" 
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <div className="flex-grow">
-                  <p className="text-gray-700">
-                    With every candidate's job search, we leverage our extensive experience to provide valuable expertise and guidance.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* ✅ Overlapping Circle (Static) */}
+          <img
+            src={roundImage}
+            alt="Overlapping circle"
+            className="absolute w-full pt-[250px] sm:pt-[300px] md:pt-[350px] h-full bottom-0 object-contain z-20"
+          />
         </div>
       </div>
-    </section>
+    </div>
+
+    {/* Right Side - Content */}
+    <motion.div
+      className="w-full lg:w-1/2 space-y-8 mt-8 lg:mt-0"
+      initial={{ x: 200, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+    >
+      {/* Header */}
+      <div className="flex items-center gap-2 mb-4">
+        <div className="w-8 md:w-12 h-1 bg-green-500"></div>
+        <span
+          className="text-sm md:text-base uppercase tracking-wider text-gray-500 font-bold"
+          style={{ fontFamily: 'Times New Roman, serif' }}
+        >
+          About Us
+        </span>
+      </div>
+
+      <h1
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6"
+        style={{ fontFamily: 'Times New Roman, serif' }}
+      >
+        About <span className="text-cyan-500">Careerup Ltd</span>
+      </h1>
+
+      {/* Main Content */}
+      <div className="space-y-4 md:space-y-6 text-black-500" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '500', fontSize: ['17.6px'] }}>
+        <p>
+          Our approach combines thoughtful analysis and heartfelt dedication. We attentively listen to your preferences, understand your requirements, and skillfully align you with a job that suits you perfectly. We consider everything from your career aspirations and personality to even your commuting needs – our comprehensive approach leaves no stone unturned.
+        </p>
+
+        <p>
+          Careerup Ltd is proud to hold the Gangmasters and Labour Abuse Authority (GLAA) license, which reflects our commitment to ensuring fair and ethical practices within the recruitment industry. The GLAA is responsible for regulating and monitoring labour exploitation within industries such as food processing. By holding this license, Careerup Ltd guarantees that all workers are provided with safe, ethical working conditions, fair pay, and appropriate support. This license also ensures that we comply with strict standards to prevent the exploitation of vulnerable workers, offering them the security and protection they deserve.
+        </p>
+      </div>
+
+      {/* Feature Points */}
+      <div className="space-y-4 md:space-y-6 mt-6 md:mt-8">
+        <div className="flex items-start gap-3 md:gap-4">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-cyan-400 to-green-400 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-7 md:w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9M9 19c0 1.105-1.105 2-2.5 2S4 20.105 4 19M16.5 12H18M16.5 12C16.5 10.895 17.395 10 18.5 10s1.5.895 1.5 2M16.5 12v6a2 2 0 002 2h2a2 2 0 002-2v-6a2 2 0 00-2-2H18.5a2 2 0 00-1.5 2z" />
+            </svg>
+          </div>
+          <p className="text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '550' }}>
+            We provide unwavering support throughout your career journey, ensuring that we are always within reach whenever you require assistance. Whether it's guidance, advice, or any other form of support, we are just a phone call away.
+          </p>
+        </div>
+
+        <div className="flex items-start gap-3 md:gap-4">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-cyan-400 to-green-400 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-7 md:w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-1a3 3 0 005.356-2.356L21 12a4.978 4.978 0 00-5-5h-2M9 7h6m0 10v-1a3 3 0 00-5.356-2.356L3 12a4.978 4.978 0 005 5h2" />
+            </svg>
+          </div>
+          <p className="text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: '550' }}>
+            With every candidate's job search, we leverage our extensive experience to provide valuable expertise and guidance.
+          </p>
+        </div>
+      </div>
+    </motion.div>
+
+  </div>
+</div>
+
   );
 };
 

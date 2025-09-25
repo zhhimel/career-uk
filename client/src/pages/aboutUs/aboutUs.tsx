@@ -12,11 +12,15 @@ import MissionVisionSection from './MissionVisionSection/MissionVisionSection';
 import AboutContentSection from './aboutContentSection/aboutContentSection';
 import AboutSection from './aboutContentSection/aboutContentSection';
 import DetailsSection from './ExpertiseDynamismSection/ExpertiseDynamismSection';
+import { useEffect, useRef } from 'react';
 // import growthIcon from '../assets/growth-icon.svg'; // Icon for "unwavering support"
 // import checklistIcon from '../assets/checklist-icon.svg'; // Icon for "extensive experience"
 
 // Re-using the Header section logic from previous interaction
 const AboutUsHeader = () => {
+  useEffect(() => {
+    document.title = "About Us - Careerup Ltd"; // Set tab title
+  }, []);
   return (
     <header className="about-us-header">
       <div className="header-image-overlay"></div> {/* For the darkening effect */}
