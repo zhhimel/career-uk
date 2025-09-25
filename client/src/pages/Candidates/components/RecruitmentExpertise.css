@@ -15,7 +15,9 @@
 }
 
 .container {
-    margin: 0 110px;
+    padding: clamp(40px, 6vw, 120px);
+    max-width: 1900px;
+    margin: 0 auto;
 }
 
 .header-section {

@@ -1,8 +1,10 @@
 /* Container + white space around everything */
 .candidate-intro-container {
     background: #ffffff;
-    padding: 110px 120px;
     box-sizing: border-box;
+    padding: clamp(40px, 6vw, 120px);
+    max-width: 1900px;
+    margin: 0 auto;
 }
 
 /* Two-column layout: text left, image right */
