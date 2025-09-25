@@ -3,14 +3,22 @@ import CandidateHero from "./components/CandidateHero";
 import CandidateIntro from "./components/CandidateIntro";
 import RecruitmentExpertise from "./components/RecruitmentExpertise";
 import JobOpportunities from "./components/JobOpportunities";
+import Contact from "../../components/Contact/Contact";
+import Footer from "../../components/Footer/Footer";
+
+import "./Candidates.css"; 
 
 const Candidates: React.FC = () => {
   return (
     <div className="candidates-page">
-      <CandidateHero/>
-      <CandidateIntro/>
-      <RecruitmentExpertise/>
-      <JobOpportunities/>
+      <div className="candidates-overlay">
+        <CandidateHero />
+        <CandidateIntro />
+        <RecruitmentExpertise />
+        <JobOpportunities />
+        <Contact/>
+        <Footer/>
+      </div>
     </div>
   );
 };

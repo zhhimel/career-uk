@@ -33,7 +33,7 @@ const Navbar = () => {
               <a href="#">About Us</a>
               <a href="/candidates">Candidates</a>
               <a href="/clients">Clients</a>
-              <a href="#">Contact Us</a>
+              <a href="/contact-us">Contact Us</a>
               <a href="#">Vacancies</a>
               <a href="#">Job Application Form</a>
               <a href="#">Recruitment Inquiry Form</a>
@@ -53,9 +53,9 @@ const Navbar = () => {
           <div className="mobile-menu">
             <a href="/">Home</a>
             <a href="#">About Us</a>
-            <a href="candidates">Candidates</a>
+            <a href="/candidates">Candidates</a>
             <a href="/clients">Clients</a>
-            <a href="#">Contact Us</a>
+            <a href="/contact-us">Contact Us</a>
             <a href="#">Vacancies</a>
             <a href="#">Job Application Form</a>
             <a href="#">Recruitment Inquiry Form</a>

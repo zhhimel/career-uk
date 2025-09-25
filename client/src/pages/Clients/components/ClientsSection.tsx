@@ -2,6 +2,7 @@ import React from "react";
 import "./ClientsSection.css";
 import peopleImg from "../../../assets/images/candidates/people1.jpg"; // replace with actual image path
 import circleImg from "../../../assets/images/candidates/circle.png";// replace with actual green circle image
+import { Section } from "lucide-react";
 
 const CheckIcon = () => (
   <svg
@@ -17,49 +18,51 @@ const CheckIcon = () => (
 
 const ClientsSection = () => {
   return (
-    <section className="clients-section">
-      {/* Left Side - Image */}
-      <div className="clients-image-wrapper">
-        <img src={peopleImg} alt="People waiting" className="clients-image" />
-        <img src={circleImg} alt="Green Circle" className="clients-circle-overlay" />
-      </div>
+      <section className="client-section">
+        <div className="clients-section">
+          {/* Left Side - Image */}
+          <div className="clients-image-wrapper">
+            <img src={peopleImg} alt="People waiting" className="clients-image" />
+            <img src={circleImg} alt="Green Circle" className="clients-circle-overlay" />
+          </div>
 
-      {/* Right Side - Content */}
-      <div className="clients-content">
-        <h2>
-          At Careerup Ltd, we provide our clients with:
-        </h2>
+          {/* Right Side - Content */}
+          <div className="clients-content">
+            <h2>
+              At Careerup Ltd, we provide our clients with:
+            </h2>
 
-        <ul className="clients-list">
-          <li>
-            <CheckIcon />
-            Our recruitment process is meticulous and comprehensive, ensuring
-            that we carefully evaluate and assess candidates to find the best
-            for our clients.
-          </li>
-          <li>
-            <CheckIcon />
-            Our Temporary and Permanent Staff solution provides added value to
-            your financial performance and overall business success.
-          </li>
-        </ul>
+            <ul className="clients-list">
+              <li>
+                <CheckIcon />
+                Our recruitment process is meticulous and comprehensive, ensuring
+                that we carefully evaluate and assess candidates to find the best
+                for our clients.
+              </li>
+              <li>
+                <CheckIcon />
+                Our Temporary and Permanent Staff solution provides added value to
+                your financial performance and overall business success.
+              </li>
+            </ul>
 
-        <h2>What is the ultimate outcome?</h2>
+            <h2>What is the ultimate outcome?</h2>
 
-        <ul className="clients-list">
-          <li>
-            <CheckIcon />
-            The vacancies are promptly filled with highly suitable and qualified
-            personnel.
-          </li>
-          <li>
-            <CheckIcon />
-            Our services help you achieve cost savings and optimize your
-            expenses.
-          </li>
-        </ul>
-      </div>
-    </section>
+            <ul className="clients-list">
+              <li>
+                <CheckIcon />
+                The vacancies are promptly filled with highly suitable and qualified
+                personnel.
+              </li>
+              <li>
+                <CheckIcon />
+                Our services help you achieve cost savings and optimize your
+                expenses.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
   );
 };
 

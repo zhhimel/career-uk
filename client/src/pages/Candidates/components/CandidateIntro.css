@@ -2,18 +2,17 @@
 .candidate-intro-container {
     background: #ffffff;
     box-sizing: border-box;
-    padding: clamp(40px, 6vw, 120px);
-    max-width: 1900px;
-    margin: 0 auto;
 }
 
 /* Two-column layout: text left, image right */
 .candidate-intro-wrapper {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
+    padding: clamp(40px, 6vw, 120px);
+    max-width: 1900px;
+    margin: 0 auto;
 }
 
 /* TEXT SECTION */

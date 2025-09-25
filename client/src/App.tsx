@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from "./pages/Home/Home";
 import Candidates from "./pages/Candidates/Candidates";
 import Clients from "./pages/Clients/Clients";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/candidates" element={<Candidates />} />
         <Route path="/clients" element={<Clients />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </Router>
   );

@@ -1,3 +1,8 @@
+.candidate-people{
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
 .people-page {
     display: flex;
     align-items: center;

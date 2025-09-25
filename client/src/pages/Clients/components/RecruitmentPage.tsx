@@ -46,9 +46,9 @@ const RecruitmentPage: React.FC = () => {
             </section>
 
             {/* Bottom Section */}
-            <section className="contact-section">
+            <section className="client-contact-section">
                 <div className="wave"></div>
-                <div className="contact-content">
+                <div className="client-contact-content">
                     <p>
                         Contact our recruitment team today at <b>07532848379, 02073771008</b> to connect with one
                         of our dedicated Team Members who specialize in your field. Give us a call and start the

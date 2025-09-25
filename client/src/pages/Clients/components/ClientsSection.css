@@ -1,3 +1,8 @@
+.client-section{
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
 .clients-section {
     display: flex;
     justify-content: space-between;
