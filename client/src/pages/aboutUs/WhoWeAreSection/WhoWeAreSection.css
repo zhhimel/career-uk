@@ -1,0 +1,179 @@
+.who-we-are-section {
+  max-width: 1200px;
+  margin: 80px auto; /* Adjust margin as needed, creates space from previous section */
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  align-items: center; /* Vertically align items */
+  gap: 40px;
+}
+
+.who-we-are-content {
+  flex: 1; /* Takes up available space */
+  min-width: 350px; /* Ensures it doesn't get too narrow */
+}
+
+.who-we-are-content .section-subtitle {
+  color: #5cb85c; /* Green accent color, consistent with previous section */
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.who-we-are-content h2 {
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+}
+
+.who-we-are-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.who-we-are-visuals {
+  flex: 1; /* Takes up available space, allows image to grow */
+  position: relative;
+  min-height: 400px; /* Ensure enough space for absolute positioning */
+  display: flex; /* For centering the image */
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px; /* Push it a bit to the right if needed */
+}
+
+.who-we-are-image-container {
+  position: relative;
+  width: 450px; /* Adjust size of the image container */
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Image on top of blobs/dots */
+  background-color: #f0f0f0; /* Fallback */
+}
+
+.who-we-are-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orange-blob {
+  position: absolute;
+  top: -20px;
+  right: 0px; /* Adjust position relative to the image container */
+  width: 180px;
+  height: 180px;
+  background-color: #ff914d; /* Orange color */
+  border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; /* Blobby shape */
+  filter: blur(40px); /* Soft blur */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.blue-dots-pattern {
+  position: absolute;
+  bottom: -20px;
+  left: 0px; /* Adjust position relative to the image container */
+  width: 250px;
+  height: 250px;
+  background-image: radial-gradient(circle, #007bff 2px, transparent 2px); /* Blue dots */
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1024px) {
+  .who-we-are-section {
+    flex-direction: column; /* Stack content and visuals */
+    margin: 60px auto;
+    padding: 0 30px;
+  }
+
+  .who-we-are-content,
+  .who-we-are-visuals {
+    flex: none; /* Remove flex grow/shrink */
+    width: 100%; /* Take full width */
+    margin-left: 0; /* Reset margin */
+  }
+
+  .who-we-are-visuals {
+    order: -1; /* Place visuals above content on mobile */
+    min-height: 350px;
+  }
+
+  .who-we-are-image-container {
+    width: 90%; /* Adjust image width */
+    max-width: 450px; /* Limit max width */
+    height: 250px;
+  }
+
+  .orange-blob {
+    top: -10px;
+    right: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .blue-dots-pattern {
+    bottom: -10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .who-we-are-section {
+    margin: 40px auto;
+    padding: 0 15px;
+    gap: 30px;
+  }
+
+  .who-we-are-content h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .who-we-are-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .who-we-are-visuals {
+    min-height: 300px;
+  }
+
+  .who-we-are-image-container {
+    width: 95%; /* Adjust image width for smaller screens */
+    height: 200px;
+  }
+
+  .orange-blob {
+    width: 120px;
+    height: 120px;
+    filter: blur(30px);
+  }
+
+  .blue-dots-pattern {
+    width: 150px;
+    height: 150px;
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-we-are-content h2 {
+    font-size: 1.8em;
+  }
+}

@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Candidates from "./pages/Candidates/Candidates";
 import Clients from "./pages/Clients/Clients";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import AboutUsPage from './pages/aboutUs/aboutUs';
 
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/candidates" element={<Candidates />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about" element={<AboutUsPage />} />
       </Routes>
     </Router>
   );
