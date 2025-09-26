@@ -12,10 +12,11 @@ import MissionVisionSection from './MissionVisionSection/MissionVisionSection';
 import AboutContentSection from './aboutContentSection/aboutContentSection';
 import AboutSection from './aboutContentSection/aboutContentSection';
 import DetailsSection from './ExpertiseDynamismSection/ExpertiseDynamismSection';
-import { useEffect, useRef } from 'react';
+import { useEffect} from 'react';
 // import growthIcon from '../assets/growth-icon.svg'; // Icon for "unwavering support"
 // import checklistIcon from '../assets/checklist-icon.svg'; // Icon for "extensive experience"
 import heroImage from "../../assets/images/candidates/hero.png"; // make sure path is correct
+import CandidateIntro from '../Candidates/components/CandidateIntro';
 // Re-using the Header section logic from previous interaction
 const AboutUsHeader = () => {
   useEffect(() => {
@@ -44,10 +45,12 @@ const AboutUsHeader = () => {
 const AboutUsPage = () => {
   return (
     <div className="about-us-container">
-      <AboutSection />
-      <WhoWeAreSection />
-      <DetailsSection/>
+      <AboutUsHeader/>
+      <AboutContentSection/>
+      <WhoWeAreSection/>
+      <ExpertiseDynamismSection/>
       <MissionVisionSection/>
+
       {/* Potentially a Footer component would go here */}
     </div>  
   );
