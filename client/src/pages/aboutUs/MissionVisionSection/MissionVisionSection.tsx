@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import backgroundImage from '../../../assets/images/bg.png';
+import backgroundImage from '../../../assets/images/bg-about.png';
 
 const MissionVisionSection = () => {
   return (
