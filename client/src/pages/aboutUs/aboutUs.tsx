@@ -13,6 +13,30 @@ import AboutContentSection from './aboutContentSection/aboutContentSection';
 import AboutSection from './aboutContentSection/aboutContentSection';
 import DetailsSection from './ExpertiseDynamismSection/ExpertiseDynamismSection';
 import { useEffect, useRef } from 'react';
+// import growthIcon from '../assets/growth-icon.svg'; // Icon for "unwavering support"
+// import checklistIcon from '../assets/checklist-icon.svg'; // Icon for "extensive experience"
+import heroImage from "../../assets/images/candidates/hero.png"; // make sure path is correct
+// Re-using the Header section logic from previous interaction
+const AboutUsHeader = () => {
+  useEffect(() => {
+    document.title = "About Us - Careerup Ltd"; // Set tab title
+  }, []);
+  return (
+    <div className="hero">
+      <img src={heroImage} alt="Candidates Hero" className="hero-bg" />
+
+      <div className="hero-overlay">
+        <h1 className="hero-title">CANDIDATES</h1>
+
+        <div className="hero-breadcrumb">
+          <span className="home-link">HOME</span> – CANDIDATES
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// New component for the detailed about content
 
 
 
