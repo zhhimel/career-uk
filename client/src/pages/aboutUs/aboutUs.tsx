@@ -16,6 +16,7 @@ import { useEffect, useRef } from 'react';
 // import growthIcon from '../assets/growth-icon.svg'; // Icon for "unwavering support"
 // import checklistIcon from '../assets/checklist-icon.svg'; // Icon for "extensive experience"
 import heroImage from "../../assets/images/candidates/hero.png"; // make sure path is correct
+import Footer from '../../components/Footer/Footer';
 // Re-using the Header section logic from previous interaction
 const AboutUsHeader = () => {
   useEffect(() => {
@@ -26,10 +27,10 @@ const AboutUsHeader = () => {
       <img src={heroImage} alt="Candidates Hero" className="hero-bg" />
 
       <div className="hero-overlay">
-        <h1 className="hero-title">CANDIDATES</h1>
+        <h1 className="hero-title">About Us</h1>
 
         <div className="hero-breadcrumb">
-          <span className="home-link">HOME</span> – CANDIDATES
+          <span className="home-link">HOME</span> – About
         </div>
       </div>
     </div>
@@ -44,10 +45,12 @@ const AboutUsHeader = () => {
 const AboutUsPage = () => {
   return (
     <div className="about-us-container">
+      <AboutUsHeader />
       <AboutSection />
       <WhoWeAreSection />
       <DetailsSection/>
       <MissionVisionSection/>
+      <Footer/>
       {/* Potentially a Footer component would go here */}
     </div>  
   );
