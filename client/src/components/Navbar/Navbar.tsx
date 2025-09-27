@@ -35,7 +35,7 @@ const Navbar = () => {
               <a href="/clients">Clients</a>
               <a href="/contact-us">Contact Us</a>
               <a href="/vacancies">Vacancies</a>
-              <a href="#">Job Application Form</a>
+              <a href="/job-application">Job Application Form</a>
               <a href="#">Recruitment Inquiry Form</a>
             </div>
 

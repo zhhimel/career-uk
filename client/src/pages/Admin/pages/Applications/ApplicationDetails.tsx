@@ -25,3 +25,4 @@ const ApplicationDetails: React.FC<Props> = ({ application }) => {
 };
 
 export default ApplicationDetails;
+  

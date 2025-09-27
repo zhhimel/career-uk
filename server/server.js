@@ -6,9 +6,12 @@ require('dotenv').config();
 
 
 const app = express5();
+app.use(express5.json());
 app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
-app.use(express5.json({ limit: '5mb' }));
+
 app.use(morgan('dev'));
+app.use(express5.urlencoded({ extended: true })); // ✅ for x-www-form-urlencoded
+
 
 
 connectDB3(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/careerup');
