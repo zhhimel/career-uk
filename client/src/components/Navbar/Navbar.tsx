@@ -36,7 +36,7 @@ const Navbar = () => {
               <a href="/contact-us">Contact Us</a>
               <a href="/vacancies">Vacancies</a>
               <a href="#">Job Application Form</a>
-              <a href="#">Recruitment Inquiry Form</a>
+              <a href="/recruitment-inquiry-form">Recruitment Inquiry Form</a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -56,9 +56,9 @@ const Navbar = () => {
             <a href="/candidates">Candidates</a>
             <a href="/clients">Clients</a>
             <a href="/contact-us">Contact Us</a>
-            <a href="#">Vacancies</a>
+            <a href="/vacancies">Vacancies</a>
             <a href="#">Job Application Form</a>
-            <a href="#">Recruitment Inquiry Form</a>
+            <a href="/recruitment-inquiry-form">Recruitment Inquiry Form</a>
           </div>
         )}
       </nav>

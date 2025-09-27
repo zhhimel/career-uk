@@ -1,0 +1,243 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6fa;
+    padding-left: clamp(40px, 6vw, 120px);
+    padding-right: clamp(40px, 6vw, 110px);
+    padding-top: clamp(40px, 6vw, 40px);
+    padding-bottom: clamp(40px, 6vw, 40px);
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.recruitment-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+label {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #007bff;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+/* existing form styles remain the same */
+
+.dropdown-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.dropdown-header {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-icon {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-search {
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.dropdown-list {
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 18px;
+}
+
+.dropdown-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-item.selected {
+    background: #007bff;
+    color: white;
+}
+/* Existing styles remain */
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input {
+    margin-right: 8px;
+}
+/* Base styles already provided above remain unchanged */
+
+/* --- Responsive adjustments --- */
+@media (max-width: 992px) {
+
+    .services-section,
+    .form-container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .recruitment-form {
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .recruitment-form {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dropdown-header,
+    .dropdown-item {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Make dropdown content responsive */
+.dropdown-content {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Optional: make textarea fully responsive */
+textarea {
+    width: 100%;
+    min-height: 80px;
+}

@@ -18,6 +18,7 @@ import UserList from "./pages/Admin/pages/Users/UserList";
 import ApplicationList from "./pages/Admin/pages/Applications/ApplicationList";
 import Login from "./pages/Admin/pages/Login/Login";
 import Dashboard from "./pages/Admin/pages/Dashboard/Dashboard";
+import RecruitmentForm from "./pages/RecruitmentForm/RecruitmentForm";
 
 const MainLayout = () => (
   <>
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/vacancies" element={<Vacancies />} />
+           <Route path="/recruitment-inquiry-form" element={<RecruitmentForm />} />
         </Route>
 
         {/* Admin routes */}
