@@ -27,10 +27,10 @@ const AboutUsHeader = () => {
       <img src={heroImage} alt="Candidates Hero" className="hero-bg" />
 
       <div className="hero-overlay">
-        <h1 className="hero-title">CANDIDATES</h1>
+        <h1 className="hero-title">About Us</h1>
 
         <div className="hero-breadcrumb">
-          <span className="home-link">HOME</span> – CANDIDATES
+          <span className="home-link">HOME</span> – About
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ const AboutUsPage = () => {
   return (
     <div className="about-us-container">
       <AboutUsHeader/>
-      <AboutContentSection/>
+      <AboutSection />
       <WhoWeAreSection/>
       <ExpertiseDynamismSection/>
       <MissionVisionSection/>
