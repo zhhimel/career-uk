@@ -1,0 +1,10 @@
+const express2 = require('express');
+const vrouter = express2.Router();
+const vacCtrl = require('../controllers/vacancyController');
+const auth = require('../middleware/auth');
+vrouter.post('/', auth, vacCtrl.createVacancy);
+vrouter.get('/', auth, vacCtrl.getVacancies);
+vrouter.get('/:id', auth, vacCtrl.getVacancy);
+vrouter.put('/:id', auth, vacCtrl.updateVacancy);
+vrouter.delete('/:id', auth, vacCtrl.deleteVacancy);
+module.exports = vrouter;
