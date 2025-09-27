@@ -1,0 +1,11 @@
+/* Custom styles for mobile responsiveness */
+.table-min-width {
+  min-width: 600px; /* Ensures table is scrollable on small screens */
+}
+
+/* Additional mobile-specific adjustments */
+@media (max-width: 640px) {
+  .table-min-width {
+    font-size: 0.75rem; /* Smaller text for table on mobile */
+  }
+}
