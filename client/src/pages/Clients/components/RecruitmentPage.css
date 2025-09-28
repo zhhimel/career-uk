@@ -1,4 +1,4 @@
-.recruitment-page {
+.clients-recruitment-page {
     font-family: "Arial", sans-serif;
     color: #222;
     line-height: 1.7;
@@ -6,7 +6,7 @@
 }
 
 /* --- Top Section --- */
-.services-section {
+.clients-services-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -16,7 +16,7 @@
     gap: 50px;
 }
 
-.services-content {
+.clients-services-content {
     flex: 1;
     padding-top: 110px;
     opacity: 0;
@@ -26,7 +26,7 @@
         animation: slideFromLeft 1.2s ease-out forwards;
 }
 
-.sub-heading {
+.clients-sub-heading {
     color: #2c3e50;
     font-size: 22px;
     letter-spacing: 2px;
@@ -34,27 +34,27 @@
     margin-bottom: 10px;
 }
 
-.main-heading {
+.clients-main-heading {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.services-content p {
+.clients-services-content p {
     margin-bottom: 8px;
     font-size: 25px;
     color: #444;
 }
 
 /* Right side image */
-.services-image {
+.clients-services-image {
     position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.woman-img {
+.clients-woman-img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -122,16 +122,16 @@
 
 /* Large screens (1200px and below) */
 @media (max-width: 1200px) {
-    .services-section {
+    .clients-services-section {
         padding: 80px 60px;
         gap: 40px;
     }
 
-    .main-heading {
+    .clients-main-heading {
         font-size: 42px;
     }
 
-    .services-content p {
+    .clients-services-content p {
         font-size: 20px;
     }
 
@@ -144,29 +144,29 @@
 
 /* Medium screens (992px and below, tablets landscape) */
 @media (max-width: 992px) {
-    .services-section {
+    .clients-services-section {
         flex-direction: column;
         align-items: center;
         padding: 60px 40px;
         text-align: center;
     }
 
-    .services-content {
+    .clients-services-content {
         padding-top: 40px;
         transform: translateY(50px);
         /* adjust animation for vertical */
         animation: slideFromBottom 1.2s ease-out forwards;
     }
 
-    .main-heading {
+    .clients-main-heading {
         font-size: 36px;
     }
 
-    .services-content p {
+    .clients-services-content p {
         font-size: 18px;
     }
 
-    .services-image {
+    .clients-services-image {
         margin-top: 30px;
         width: 80%;
     }
@@ -181,23 +181,23 @@
 
 /* Small screens (768px and below, tablets portrait & large phones) */
 @media (max-width: 768px) {
-    .services-section {
+    .clients-services-section {
         padding: 50px 20px;
     }
 
-    .sub-heading {
+    .clients-sub-heading {
         font-size: 18px;
     }
 
-    .main-heading {
+    .clients-main-heading {
         font-size: 30px;
     }
 
-    .services-content p {
+    .clients-services-content p {
         font-size: 16px;
     }
 
-    .services-image {
+    .clients-services-image {
         width: 100%;
     }
 
@@ -210,15 +210,15 @@
 
 /* Extra small screens (480px and below, mobile phones) */
 @media (max-width: 480px) {
-    .services-section {
+    .clients-services-section {
         padding: 40px 15px;
     }
 
-    .main-heading {
+    .clients-main-heading {
         font-size: 26px;
     }
 
-    .services-content p {
+    .clients-services-content p {
         font-size: 15px;
         line-height: 1.6;
     }

@@ -9,7 +9,10 @@ const CandidateContact: React.FC = () => {
         Feel free to use the contact form below to reach out to us.
         We will respond to your message as promptly as we can.
       </p>
-      <button className="contact-us-btn">Click Here</button>
+      <a href="/contact-us" className="contact-us-btn">
+        Click Here
+      </a>
+
     </div>
   );
 };

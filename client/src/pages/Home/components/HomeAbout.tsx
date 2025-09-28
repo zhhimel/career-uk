@@ -118,10 +118,10 @@ const HomeAbout = () => {
           </div>
 
           {/* Read More Button */}
-          <div className="mt-4 flex justify-center">
+          <div className="mt-4 flex">
             <a
                 href="/about" // Change this to your desired link
-                className="inline-block px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow hover:bg-cyan-600 transition"
+                className="inline-block px-6 py-3 bg-cyan-500 text-white font-semibold rounded-2xl shadow hover:bg-cyan-600 transition"
             >
                 Read More
             </a>

@@ -82,8 +82,8 @@ const Carousel = () => {
                     {carouselContent.description}
                 </p>
                 <div className="carousel-buttons">
-                    <a href="#" className="btn btn-primary">Read More</a>
-                    <a href="#" className="btn btn-secondary">Contact Us</a>
+                    <a href="/about" className="btn btn-primary">Read More</a>
+                    <a href="contact-us" className="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
           </div>

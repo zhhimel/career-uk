@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect} from 'react';
 import CandidateHero from "./components/CandidateHero";
 import CandidateIntro from "./components/CandidateIntro";
 import RecruitmentExpertise from "./components/RecruitmentExpertise";
@@ -9,6 +10,9 @@ import Footer from "../../components/Footer/Footer";
 import "./Candidates.css"; 
 
 const Candidates: React.FC = () => {
+  useEffect(() => {
+      document.title = "Candidates - BreezNext Ltd"; // Set tab title
+    }, []);
   return (
     <div className="candidates-page">
       <div className="candidates-overlay">

@@ -29,7 +29,7 @@ const ClientsSection = () => {
           {/* Right Side - Content */}
           <div className="clients-content">
             <h2>
-              At Careerup Ltd, we provide our clients with:
+              At BreezNext Ltd, we provide our clients with:
             </h2>
 
             <ul className="clients-list">

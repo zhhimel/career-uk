@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RecruitmentForm.css";
 import Footer from "../../components/Footer/Footer";
 
@@ -323,6 +323,9 @@ const RecruitmentForm: React.FC = () => {
 };
 
 const RecruitmentInquiryForm: React.FC = () => {
+   useEffect(() => {
+        document.title = "Recruitment Inquiry Form - BreezNext Ltd"; // Set tab title
+   }, []);
   return (
     <div className="recruitment-inquiry-form-page">
       <RecruitmentForm/>

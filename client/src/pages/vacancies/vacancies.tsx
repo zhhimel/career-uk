@@ -1,7 +1,11 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './vacancies.css'; // Assuming you'll have a CSS file for styling
 
 const Vacancies = () => {
+  useEffect(() => {
+        document.title = "Vacancies - BreezNext Ltd"; // Set tab title
+      }, []);
   return (
     <div className="job-search-container">
       <div className="search-bar">

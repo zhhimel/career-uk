@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./JobApplicationForm.css";
 import axios from "axios";
 export default function JobApplicationForm() {
@@ -53,6 +54,10 @@ export default function JobApplicationForm() {
             alert("Failed to submit application. Please try again.");
         }
     };
+
+     useEffect(() => {
+        document.title = "Job Application Form - BreezNext Ltd"; // Set tab title
+    }, []);
 
     return (
         <div className="job-form-container">

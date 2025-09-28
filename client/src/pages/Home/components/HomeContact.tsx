@@ -1,7 +1,7 @@
 import React from "react";
-import "./ContactUsMain.css";
+import "./HomeContact.css";
 
-const ContactUsMain: React.FC = () => {
+const HomeContact: React.FC = () => {
   return (
     <div className="contact-page">
       <div className="contact-container">
@@ -48,22 +48,8 @@ const ContactUsMain: React.FC = () => {
           </form>
         </div>
       </div>
-
-      {/* Map Section */}
-      <div className="contact-map">
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d79467.55084326147!2d-0.12204187101106119!3d51.50659338624518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2sLondon%20Eye!5e0!3m2!1sen!2sus!4v1758832692395!5m2!1sen!2sus"
-          width="100%"
-          height="800"
-          style={{ border: 0, width: "100%", height: "800px" }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
     </div>
   );
 };
 
-export default ContactUsMain;
+export default HomeContact;

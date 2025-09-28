@@ -12,35 +12,35 @@ const RecruitmentPage: React.FC = () => {
     }, []);
 
     return (
-        <div className="recruitment-page">
+        <div className="clients-recruitment-page">
             {/* Top Section */}
-            <section className="services-section">
-                <div className={`services-content ${animate ? "slide-in" : ""}`}>
-                <h5 className="sub-heading">Clients</h5>
-                <h1 className="main-heading">Our Recruitment Services</h1>
+            <section className="clients-services-section">
+                <div className={`clients-services-content ${animate ? "slide-in" : ""}`}>
+                <h5 className="clients-sub-heading">Clients</h5>
+                <h1 className="clients-main-heading">Our Recruitment Services</h1>
                 <p>
-                    Careerup Ltd offers comprehensive recruitment services for all industries across the UK.
+                    BreezNext Ltd offers comprehensive recruitment services for all industries across the UK.
                     Whether you need to find new talent or cover specific roles, our team of experienced
                     consultants is dedicated to supporting you. We maintain a pool of qualified candidates
                     in various sectors, readily available in our database. Partner with us to find the right
                     staffing solutions that align with your business needs.
                 </p>
                 <p>
-                    In the Commercial sector, Careerup Ltd specializes in providing staffing solutions for a
+                    In the Commercial sector, BreezNext Ltd specializes in providing staffing solutions for a
                     wide range of roles. Our expertise in these areas ensures that we can assist you in
                     finding the ideal candidates to meet your specific requirements across key business
                     functions.
                 </p>
                 <p>
-                    Careerup Ltd excels in the Commercial and Industrial sectors, offering comprehensive
+                    BreezNext Ltd excels in the Commercial and Industrial sectors, offering comprehensive
                     staffing solutions. Whether you need skilled workers for manufacturing processes or
                     other specialized roles, our expertise can assist you in identifying the right candidates
                     to meet your specific staffing needs.
                 </p>
                 </div>
 
-                <div className="services-image">
-                <img src={womanImg} alt="Recruitment" className="woman-img" />
+                <div className="clients-services-image">
+                <img src={womanImg} alt="Recruitment" className="clients-woman-img" />
                 <img src={circleImg} alt="Green Circle" className="clients-circle-img" />
                 </div>
             </section>

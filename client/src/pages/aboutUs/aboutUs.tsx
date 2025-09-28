@@ -15,17 +15,17 @@ import Footer from '../../components/Footer/Footer';
 // Re-using the Header section logic from previous interaction
 const AboutUsHeader = () => {
   useEffect(() => {
-    document.title = "About Us - Careerup Ltd"; // Set tab title
+    document.title = "About Us - BreezNext Ltd"; // Set tab title
   }, []);
   return (
     <div className="hero">
       <img src={heroImage} alt="Candidates Hero" className="hero-bg" />
 
       <div className="hero-overlay">
-        <h1 className="hero-title">About Us</h1>
+        <h1 className="hero-title">ABOUT US</h1>
 
         <div className="hero-breadcrumb">
-          <span className="home-link">HOME</span> – About
+          <span className="home-link">HOME</span> – ABOUT US
         </div>
       </div>
     </div>

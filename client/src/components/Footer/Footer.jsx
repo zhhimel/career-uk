@@ -37,12 +37,13 @@ const Footer = () => {
         <div className="footer-column">
           <h4>OUR SERVICES</h4>
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Candidates</li>
-            <li>Modern Slavery Statement</li>
-            <li>Contact Us</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/candidates">Candidates</a></li>
+            <li><a href="/modern-slavery-statement">Modern Slavery Statement</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
           </ul>
+
         </div>
 
         {/* Social Media Section */}

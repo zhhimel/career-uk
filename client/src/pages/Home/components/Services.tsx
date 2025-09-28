@@ -99,8 +99,11 @@ const Services: React.FC = () => {
 
       {/* Bottom Button */}
       <div className="services-button">
-        <button>View All Services</button>
+        <a href="/candidates">
+          <button>View All Services</button>
+        </a>
       </div>
+
     </section>
   );
 };

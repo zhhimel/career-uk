@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import ClientHero from "./components/ClientHero";
 import RecruitmentPage from "./components/RecruitmentPage";
 import ClientsSection from "./components/ClientsSection";
@@ -8,6 +9,9 @@ import Footer from "../../components/Footer/Footer";
 import "./Clients.css"; 
 
 const Clients: React.FC = () => {
+  useEffect(() => {
+        document.title = "Clients - BreezNext Ltd"; // Set tab title
+      }, []);
   return (
     <div className="clients-page">
       <div className="clients-overlay">

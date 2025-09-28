@@ -48,8 +48,11 @@ const ServicesWeOffered: React.FC = () => {
 
       {/* Bottom Full-Width Image */}
       <div className="services-bottom-image">
-        <img src={SectorsImg} alt="Sectors We Serve" />
+        <a href="/candidates">
+          <img src={SectorsImg} alt="Sectors We Serve" />
+        </a>
       </div>
+
     </section>
   );
 };

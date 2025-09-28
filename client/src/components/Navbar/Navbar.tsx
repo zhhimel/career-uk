@@ -24,8 +24,11 @@ const Navbar = () => {
             
             {/* ✅ Logo with Image */}
             <div className="logo-container">
-              <img src={logo} alt="CareerUP Logo" className="logo-img" />
+              <a href="/">
+                <img src={logo} alt="BreezNext Logo" className="logo-img" />
+              </a>
             </div>
+
 
             {/* Desktop Menu */}
             <div className="desktop-menu">
@@ -36,7 +39,7 @@ const Navbar = () => {
               <a href="/contact-us">Contact Us</a>
               <a href="/vacancies">Vacancies</a>
               <a href="/job-application">Job Application Form</a>
-              <a href="#">Recruitment Inquiry Form</a>
+              <a href="/recruitment-inquiry-form">Recruitment Inquiry Form</a>
             </div>
 
             {/* Mobile Menu Button */}
