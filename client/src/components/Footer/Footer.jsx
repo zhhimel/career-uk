@@ -29,7 +29,7 @@ const Footer = () => {
             <FaPhoneAlt className="icon" /> 020 7993 0058
           </p>
           <p className="footer-item">
-            <FaEnvelope className="icon" /> contact@careerup.uk
+            <FaEnvelope className="icon" /> contact@breeznest.co.uk
           </p>
         </div>
 

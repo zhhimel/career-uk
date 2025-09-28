@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Contact from "../../components/Contact/Contact";
 
 import "./Home.css"; 
+import HomeAbout from "./components/HomeAbout";
 
 
 const Home: React.FC = () => {
@@ -15,7 +16,7 @@ const Home: React.FC = () => {
     <div className="home-page">
       <div className="home-overlay">
         <Carousel />
-        <AboutSection/>
+        <HomeAbout/>
         <MissionVisionSection/>
         <ServicesWeOffered/>
         <Services/>
