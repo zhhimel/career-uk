@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express5();
 app.use(express5.json());
-app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
+app.use(cors({ origin: '*', credentials: true }));
 
 app.use(morgan('dev'));
 app.use(express5.urlencoded({ extended: true })); // ✅ for x-www-form-urlencoded

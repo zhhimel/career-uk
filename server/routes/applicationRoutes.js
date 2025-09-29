@@ -7,5 +7,6 @@ arouter.post('/', appCtrl.createApplication);
 // Admin endpoints
 arouter.get('/', auth2, appCtrl.getApplications);
 arouter.get('/export/csv', auth2, appCtrl.exportApplicationsCsv);
-arouter.get('/:id', auth2, appCtrl.getApplication);
+arouter.put('/:id', auth2, appCtrl.updateApplication);
+arouter.delete('/:id', auth2, appCtrl.deleteApplication);
 module.exports = arouter;

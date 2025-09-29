@@ -9,13 +9,13 @@ export default function JobApplicationForm() {
         email: "",
         phone: "",
         location: "",
-        jobTitle: "",
+        preferredRole: "",
         industry: "",
         availability: "",
         experience: "",
         qualifications: "",
         preferredLocations: "",
-        referral: "",
+        heardAboutUs: "",
     });     
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -41,13 +41,13 @@ export default function JobApplicationForm() {
                 email: "",
                 phone: "",
                 location: "",
-                jobTitle: "",
+                preferredRole: "",
                 industry: "",
                 availability: "",
                 experience: "",
                 qualifications: "",
                 preferredLocations: "",
-                referral: "",
+                heardAboutUs: "",
             });
         } catch (error) {
             console.error("Error submitting form:", error.response || error);
@@ -115,8 +115,8 @@ export default function JobApplicationForm() {
                     Preferred Job Title/Role
                     <input
                         type="text"
-                        name="jobTitle"
-                        value={formData.jobTitle}
+                        name="preferredRole"
+                        value={formData.preferredRole}
                         onChange={handleChange}
                     />
                 </label>
@@ -180,11 +180,11 @@ export default function JobApplicationForm() {
 
                 <label>
                     How did you hear about us?
-                    <select name="referral" value={formData.referral} onChange={handleChange}>
+                    <select name="heardAboutUs" value={formData.heardAboutUs} onChange={handleChange}>
                         <option value="">Select</option>
                         <option value="LinkedIn">LinkedIn</option>
                         <option value="Google Search">Google Search</option>
-                        <option value="Friend/Referral">Friend/Referral</option>
+                        <option value="Friend/heardAboutUs">Friend/heardAboutUs</option>
                         <option value="Other">Other</option>
                     </select>
                 </label>

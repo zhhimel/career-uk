@@ -8,6 +8,9 @@ import Topbar from "../../components/Topbar/Topbar";
 
 import VacancyPage from "../../pages/Vacancy/Vacancy";
 import DefaultPage from "./DefaultPage";
+import ApplicationList from "../Applications/ApplicationList";
+import ApplicationsPage from "../Applications/ApplicationList";
+import InquiryPage from "../Inquiry/InquiryPage";
 function Dashboard() {
  
   const [isLoggedOut, setIsLoggedOut] = useState(false);
@@ -26,20 +29,21 @@ function Dashboard() {
     switch (activeTab) {
       case "vacancies":
         return <VacancyPage />;
-      // case "applications":
-      //   return <JobApplicationsPage />;
-      // case "inquiries":
-      //   return <InquiryFormsPage />;
+      case "applications":
+        return <ApplicationsPage/>;
+       case "inquiries":
+         return <InquiryPage/>;
       case "AdminPanel":
         return <DefaultPage />;
       default:
         return <DefaultPage />;
     }
   };
+  console.log(activeTab);
   return (
 
     <div className="min-h-screen bg-gray-50">
-
+      
       <Topbar title="Admin Panel"
         activeTab={activeTab}
         onTabChange={setActiveTab}

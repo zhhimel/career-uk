@@ -22,3 +22,13 @@ exports.getInquiry = async (req, res) => {
     if (!iq) return res.status(404).json({ message: 'Not found' });
     res.json(iq);
 };
+exports.deleteInquiry = async (req, res) => {
+    const iq = await Inquiry.findByIdAndDelete(req.params.id);
+    if (!iq) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+};
+exports.updateInquiry = async (req, res) => {
+    const iq = await Inquiry.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!iq) return res.status(404).json({ message: 'Not found' });
+    res.json(iq);
+};
