@@ -11,7 +11,7 @@ import "./Candidates.css";
 
 const Candidates: React.FC = () => {
   useEffect(() => {
-      document.title = "Candidates - BreezNext Ltd"; // Set tab title
+      document.title = "Candidates - BreezNest Ltd"; // Set tab title
     }, []);
   return (
     <div className="candidates-page">

@@ -82,7 +82,7 @@ const WhoWeAreSection = () => {
                 color: '#6b7280',
               }}
             >
-              BreezNext Ltd
+              BreezNest Ltd
             </span>
           </div>
 

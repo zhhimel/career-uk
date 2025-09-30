@@ -56,7 +56,7 @@ export default function JobApplicationForm() {
     };
 
      useEffect(() => {
-        document.title = "Job Application Form - BreezNext Ltd"; // Set tab title
+        document.title = "Job Application Form - BreezNest Ltd"; // Set tab title
     }, []);
 
     return (

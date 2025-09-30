@@ -70,7 +70,7 @@ const MissionVisionSection = () => {
           {/* Top Label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.975rem', fontWeight: 500, textTransform: 'uppercase' ,letterSpacing:'3px'}}>
             <span style={{ width: '24px', height: '2px', backgroundColor: '#10b981', display: 'inline-block' }}></span>
-            BreezNext Ltd
+            BreezNest Ltd
           </div>
 
           {/* Heading */}
@@ -96,7 +96,7 @@ const MissionVisionSection = () => {
               fontWeight: 500,
             }}
           >
-            BreezNext Ltd is a prominent recruitment agency, renowned for its expertise in the field. Whether your business requires assistance with temporary or permanent positions, we are well-equipped to lend a helping hand. Our client-centric approach ensures that we not only provide high-caliber candidates but also offer valuable insights to enhance your business.
+            BreezNest Ltd is a prominent recruitment agency, renowned for its expertise in the field. Whether your business requires assistance with temporary or permanent positions, we are well-equipped to lend a helping hand. Our client-centric approach ensures that we not only provide high-caliber candidates but also offer valuable insights to enhance your business.
           </p>
         </motion.div>
 

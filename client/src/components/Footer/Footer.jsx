@@ -58,7 +58,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>CareerUp© 2025 All rights reserved</p>
+        <p>BreezNest© 2025 All rights reserved</p>
         <a href="#">Privacy Policy</a>
       </div>
     </footer>

@@ -15,7 +15,7 @@ import Footer from '../../components/Footer/Footer';
 // Re-using the Header section logic from previous interaction
 const AboutUsHeader = () => {
   useEffect(() => {
-    document.title = "About Us - BreezNext Ltd"; // Set tab title
+    document.title = "About Us - BreezNest Ltd"; // Set tab title
   }, []);
   return (
     <div className="hero">

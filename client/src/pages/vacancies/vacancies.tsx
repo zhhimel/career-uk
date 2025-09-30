@@ -4,7 +4,7 @@ import './vacancies.css'; // Assuming you'll have a CSS file for styling
 
 const Vacancies = () => {
   useEffect(() => {
-        document.title = "Vacancies - BreezNext Ltd"; // Set tab title
+        document.title = "Vacancies - BreezNest Ltd"; // Set tab title
       }, []);
   return (
     <div className="job-search-container">

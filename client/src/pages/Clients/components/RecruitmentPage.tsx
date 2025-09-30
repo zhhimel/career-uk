@@ -19,20 +19,20 @@ const RecruitmentPage: React.FC = () => {
                 <h5 className="clients-sub-heading">Clients</h5>
                 <h1 className="clients-main-heading">Our Recruitment Services</h1>
                 <p>
-                    BreezNext Ltd offers comprehensive recruitment services for all industries across the UK.
+                    BreezNest Ltd offers comprehensive recruitment services for all industries across the UK.
                     Whether you need to find new talent or cover specific roles, our team of experienced
                     consultants is dedicated to supporting you. We maintain a pool of qualified candidates
                     in various sectors, readily available in our database. Partner with us to find the right
                     staffing solutions that align with your business needs.
                 </p>
                 <p>
-                    In the Commercial sector, BreezNext Ltd specializes in providing staffing solutions for a
+                    In the Commercial sector, BreezNest Ltd specializes in providing staffing solutions for a
                     wide range of roles. Our expertise in these areas ensures that we can assist you in
                     finding the ideal candidates to meet your specific requirements across key business
                     functions.
                 </p>
                 <p>
-                    BreezNext Ltd excels in the Commercial and Industrial sectors, offering comprehensive
+                    BreezNest Ltd excels in the Commercial and Industrial sectors, offering comprehensive
                     staffing solutions. Whether you need skilled workers for manufacturing processes or
                     other specialized roles, our expertise can assist you in identifying the right candidates
                     to meet your specific staffing needs.

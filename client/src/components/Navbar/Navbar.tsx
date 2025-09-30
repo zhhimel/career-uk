@@ -25,7 +25,7 @@ const Navbar = () => {
             {/* ✅ Logo with Image */}
             <div className="logo-container">
               <a href="/">
-                <img src={logo} alt="BreezNext Logo" className="logo-img" />
+                <img src={logo} alt="BreezNest Logo" className="logo-img" />
               </a>
             </div>
 

@@ -324,7 +324,7 @@ const RecruitmentForm: React.FC = () => {
 
 const RecruitmentInquiryForm: React.FC = () => {
    useEffect(() => {
-        document.title = "Recruitment Inquiry Form - BreezNext Ltd"; // Set tab title
+        document.title = "Recruitment Inquiry Form - BreezNest Ltd"; // Set tab title
    }, []);
   return (
     <div className="recruitment-inquiry-form-page">

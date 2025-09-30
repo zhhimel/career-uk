@@ -70,6 +70,7 @@ const AboutSection = () => {
                 src={roundImage}
                 alt="Overlapping circle"
                 className="absolute w-full pt-[250px] sm:pt-[300px] md:pt-[250px] h-full bottom-0 object-contain z-20"
+                style={{bottom: "-8px"}}
               />
             </div>
           </div>
@@ -97,7 +98,7 @@ const AboutSection = () => {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6"
             style={{ fontFamily: "Times New Roman, serif" }}
           >
-            About <span className="text-cyan-500">BreezNext Ltd</span>
+            About <span className="text-cyan-500">BreezNest Ltd</span>
           </h1>
 
           {/* Main Content */}
@@ -119,12 +120,12 @@ const AboutSection = () => {
             </p>
 
             <p>
-              BreezNext Ltd is proud to hold the Gangmasters and Labour Abuse
+              BreezNest Ltd is proud to hold the Gangmasters and Labour Abuse
               Authority (GLAA) license, which reflects our commitment to
               ensuring fair and ethical practices within the recruitment
               industry. The GLAA is responsible for regulating and monitoring
               labour exploitation within industries such as food processing. By
-              holding this license, BreezNext Ltd guarantees that all workers
+              holding this license, BreezNest Ltd guarantees that all workers
               are provided with safe, ethical working conditions, fair pay, and
               appropriate support. This license also ensures that we comply with
               strict standards to prevent the exploitation of vulnerable workers,

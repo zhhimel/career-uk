@@ -7,7 +7,7 @@ import ContactUsMain from "./components/ContactUsMain";
 
 const Clients: React.FC = () => {
   useEffect(() => {
-        document.title = "Contact Us - BreezNext Ltd"; // Set tab title
+        document.title = "Contact Us - BreezNest Ltd"; // Set tab title
       }, []);
   return (
     <div className="contact-us-page">

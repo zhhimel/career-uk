@@ -10,7 +10,7 @@ import "./Clients.css";
 
 const Clients: React.FC = () => {
   useEffect(() => {
-        document.title = "Clients - BreezNext Ltd"; // Set tab title
+        document.title = "Clients - BreezNest Ltd"; // Set tab title
       }, []);
   return (
     <div className="clients-page">

@@ -68,7 +68,8 @@ const HomeAbout = () => {
               <img
                 src={roundImage}
                 alt="Overlapping circle"
-                className="absolute w-full pt-[250px] sm:pt-[300px] md:pt-[250px] h-full bottom-0 object-contain z-20"
+                className="absolute w-full pt-[250px] sm:pt-[300px] md:pt-[250px] h-full object-contain z-20"
+                style={{bottom: "-8px"}}
               />
             </div>
           </div>
@@ -109,11 +110,11 @@ const HomeAbout = () => {
             }}
           >
             <p>
-              At BreezNext Ltd, our candidate-centric approach allows us to effectively match individuals with the most suitable roles, whether they are seeking temporary or permanent positions. We cover a diverse range of disciplines, ensuring a comprehensive and tailored approach to finding the perfect fit for every candidate.
+              At BreezNest Ltd, our candidate-centric approach allows us to effectively match individuals with the most suitable roles, whether they are seeking temporary or permanent positions. We cover a diverse range of disciplines, ensuring a comprehensive and tailored approach to finding the perfect fit for every candidate.
             </p>
 
             <p>
-              BreezNext Ltd has been shaping futures in the commercial industry for over a decade, providing our clients and candidates with specialize knowledge and expertise. We are dedicated to building successful careers by leveraging our extensive experience and industry insights.
+              BreezNest Ltd has been shaping futures in the commercial industry for over a decade, providing our clients and candidates with specialize knowledge and expertise. We are dedicated to building successful careers by leveraging our extensive experience and industry insights.
             </p>
           </div>
 

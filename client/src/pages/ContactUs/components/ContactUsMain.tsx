@@ -13,7 +13,7 @@ const ContactUsMain: React.FC = () => {
           </h2>
           <p className="contact-description">
             Contact us today to discuss your temporary and permanent staffing
-            requirements and discover how BreezNext Ltd can support your business
+            requirements and discover how BreezNest Ltd can support your business
             with reliable, qualified, and flexible workforce solutions. Our team
             is ready to assist you and provide the exceptional service you
             deserve.
